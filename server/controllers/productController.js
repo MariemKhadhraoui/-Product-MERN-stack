@@ -72,9 +72,9 @@ exports.searchProduct = async (req, res) => {
       const regex = new RegExp(nom, 'i');
       const products = await Product.find({ nom: regex });
       
-      if (products.length === 0) {
-        return res.status(404).json({ error: 'Aucun produit trouvé' });
-      }
+      // if (products.length === 0) {
+      //   return res.status(404).json({ error: 'Aucun produit trouvé' });
+      // }
       
       res.json(products);
     } catch (error) {
